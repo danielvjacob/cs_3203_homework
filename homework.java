@@ -34,5 +34,14 @@ public class homework {
         }
         return result;
     }
+
+    public static void reverse(int a[], int len){
+        int[] reversed = new int[len];
+        int count = len;
+        for (int i = 0; i < len; i++) {
+            reversed[count - 1] = a[i];
+            count = count - 1;
+        }
+    }
 }
 
