@@ -18,6 +18,11 @@ public class homework {
 
         System.out.println("The sum of the array is: " + sum);
         System.out.println("The product of the array is: " + product);
+
+        int[] reversed = reverse(array, array.length);
+        for (int i = 0; i < array.length; i++){
+            System.out.print(reversed[i]);
+        }
     }
     public static int Sum(int[] array) {
         int result = 0;
@@ -35,13 +40,14 @@ public class homework {
         return result;
     }
 
-    public static void reverse(int a[], int len){
+    public static int[] reverse(int a[], int len){
         int[] reversed = new int[len];
         int count = len;
         for (int i = 0; i < len; i++) {
             reversed[count - 1] = a[i];
             count = count - 1;
         }
+        return reversed;
     }
 }
 
